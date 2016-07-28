@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>曦元的在线简历</title>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/fullPage.js/2.8.1/jquery.fullPage.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+<body>
+  <div id="fullpage">
+    <div class="section section1">
+      <div class="viewport">
+        <div class="circle"><img src="me.png" alt=""></div>
+        <div class="name"><p class="ch">崔 成亮</p><p class="ee">Cui Chengliang</p></div>
+        <div class="desc"><p>——— &nbsp;&nbsp;一个喜欢让web看起来更智能更规整的前端求职者&nbsp;&nbsp; ———</p><p class="ps">希望可以更快的成长，用自己的力量解决一些人生难题<p></div>
+      </div>
+    </div>
+    <div class="section section2">
+      <div class="viewport">
+
+        <p class="title">技能点分配</p>
+
+        <div class="tech">
+          <div class="data htm"><span>HTML</span></div>
+          <div class="data css"><span>CSS</span></div>
+          <div class="data scs"><span>SCSS</span></div>
+          <div class="data jav"><span>JavarScript</span></div>
+          <div class="data jqe"><span>jQuery</span></div>
+          <div class="data nod"><span>node.js</span></div>
+          <div class="data pho"><span>PhotoShop</span></div>
+          <div class="data off"><span>office</span></div>
+          <div class="data pic"><span>AfterEffect</span></div>
+        </div>
+
+      </div>
+    </div>
+    <div class="section section3">
+      <div class="viewport">
+        <p class="title">个人作品</p>
+        <ul class="sec3">
+          <li class="demo">
+            <a class="botton" target="_blank" href="edu/edu.html">仿站-网易教育产品部<span class="link">&nbsp;></span></a>
+            <span class="de-desc">网易微专业的结课大作业，数据通过ajax访问网易服务器，功能包含了大量web功能，包括cookie,表单验证,响应式等。兼容IE8+<p>p.s:单击咖色条跳转链接<a href="edu/netEast-edu.zip" download="仿站-网易教育">此处下载</a></p></span>
+          </li>
+          <li class="demo">
+            <a class="botton" target="_blank" href="photoWrap/photo.html">单页面应用-照片展板<span class="link">&nbsp;></span></a>
+            <span class="de-desc">用自己拍的照片做的展板，使用大量CSS3属性及全部原生Js控制，做出自认为不错的效果，只完美兼容现代浏览器。（创意来源于别处）<p>p.s:单击咖色条跳转链接<a href="photoWrap/photoWrap.zip" download="照片展板">此处下载</a></p></span>
+          </li>
+        </ul>
+        <div class="wait">
+          <p>缓慢更新中…</p>
+        </div>
+      </div>
+    </div>
+    <div class="section section4">
+      <div class="viewport">
+        <div class="title">个人信息</div>
+        <div class="info">
+          <div class="real">
+            <p>毕业院校：大连民族大学</p>
+            <p>所学专业：数学与应用数学</p>
+            <p>工作年限：应届毕业生</p>
+            <p>到岗时间：立即</p>
+          </div>
+          <div class="vert"></div>
+          <div class="cont">
+            <p>住址：北京北洼西里小区</p>
+            <p>电话：186 9864 3630</p>
+            <p>邮箱：<a href="mailto:me@xi-yuan.cn">me@xi-yuan.cn</a></p>
+            <p class="cv"><a href="cv/FrontEnd-CuiChengliang.pdf" download="前端-崔成亮">纸质简历下载</a></p>
+          </div>
+        </div>
+        <div class="law">
+          <a href="http://www.miibeian.gov.cn/" target="_blank">辽ICP备16002460号-1</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js" charset="utf-8"></script>
+  <script src="http://cdn.bootcss.com/fullPage.js/2.8.1/jquery.fullPage.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    (function () {
+      var docEl = document.documentElement;
+      function recalc() {
+          //设置根字体大小
+          minW = docEl.clientWidth < (docEl.clientHeight*2) ? docEl.clientWidth : docEl.clientHeight*2;
+          docEl.style.fontSize = (minW / 14) + 'px';
+      };
+      recalc();
+
+      //绑定浏览器缩放事件
+      window.addEventListener('resize', recalc, false);
+      window.addEventListener('configurationChanged', recalc, false);
+    })()
+
+    $('document').ready(function() {
+      $('#fullpage').fullpage({
+        controlArrows: false,
+        verticalCenterd: false,
+        scrollingSpeed: 500,
+        anchors:['page1','page2','page3','page4'],
+        navigation: true,
+        navigationPosition:'left',
+        navigationTooltips:['page1','page2','page3','page4'],
+        navigationColor:['#dedede','#dedede','#dedede','#dedede'],
+      });
+    });
+
+  </script>
+
+</body>
+</html>
